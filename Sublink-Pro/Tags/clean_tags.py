@@ -15,8 +15,12 @@ urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
 # 定义删除标签的基础URL
 BASE_DELETE_URL = "https://xxxxx.zeabur.app/api/v1/tags/delete"
-# ✅ 维护建议：改为手动输入，保护隐私
-TOKEN = input("请输入最新的 Bearer Token: ")
+# 两种Token获取方式，根据需要选择其中一种：
+# 方式1: 直接赋值（适合本地频繁使用，注意不要提交到GitHub）
+# TOKEN = "your_token_here"  # 取消注释并替换为你的Token
+
+# 方式2: 运行时输入（安全，推荐用于可能共享的环境）
+TOKEN = input("请输入 Bearer Token: ")
 
 # 设置请求头信息，包含认证信息和用户代理
 HEADERS = {

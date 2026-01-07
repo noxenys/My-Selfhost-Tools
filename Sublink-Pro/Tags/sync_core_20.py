@@ -18,8 +18,12 @@ API_URL = "https://xxxxxx.zeabur.app/api/v1/tags/add"
 
 # 💡 维护建议：运行脚本时再粘贴 Token。
 # 这样即便代码上传到 GitHub Public 仓库，你的账号也是安全的
-# 提示用户输入Bearer Token，用于API认证
-TOKEN = input("请输入最新的 Bearer Token: ")
+# 两种Token获取方式，根据需要选择其中一种：
+# 方式1: 直接赋值（适合本地频繁使用，注意不要提交到GitHub）
+# TOKEN = "your_token_here"  # 取消注释并替换为你的Token
+
+# 方式2: 运行时输入（安全，推荐用于可能共享的环境）
+TOKEN = input("请输入 Bearer Token: ")
 
 # 设置请求头信息，包含认证信息和内容类型等
 HEADERS = {

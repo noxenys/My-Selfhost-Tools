@@ -17,8 +17,12 @@ urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 API_URL = "https://xxxxxx.zeabur.app/api/v1/tags/add"
 
 # 💡 安全建议：运行脚本时手动粘贴 Token，保护隐私
-# 通过input函数获取用户输入的Bearer Token
-TOKEN = input("请输入最新的 Bearer Token: ")
+# 两种Token获取方式，根据需要选择其中一种：
+# 方式1: 直接赋值（适合本地频繁使用，注意不要提交到GitHub）
+# TOKEN = "your_token_here"  # 取消注释并替换为你的Token
+
+# 方式2: 运行时输入（安全，推荐用于可能共享的环境）
+TOKEN = input("请输入 Bearer Token: ")
 
 # 设置请求头信息，包括认证令牌、内容类型和用户代理
 HEADERS = {
